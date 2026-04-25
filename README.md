@@ -23,7 +23,7 @@ const result = await registerPasskey({
   rpName: 'Acme Custody',                // shown by the OS passkey UI
   userIdentifier: 'user:42',             // stable per user; not displayed
   chainId: 137,                          // chain the signer will be used on
-  rpcUrl: 'https://polygon-rpc.com',
+  rpcUrl: 'https://polygon-bor-rpc.publicnode.com',
 });
 
 // Send `result.address`, `result.credentialId`, and `result.metadata`
