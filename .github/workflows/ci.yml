@@ -66,8 +66,11 @@ jobs:
           node-version: '22.x'
           cache: 'npm'
       - run: npm ci
-      - name: npm audit (moderate)
-        run: npm audit --audit-level=moderate
+      - name: npm audit (production deps only, moderate+)
+        # Only the contents of `dist/` ship to consumers, and `dist/` only
+        # carries our runtime deps. Dev-tool advisories (vitest/vite/etc.)
+        # don't reach end users, so we audit production deps only.
+        run: npm audit --omit=dev --audit-level=moderate
 
   publish-dry-run:
     runs-on: ubuntu-latest

@@ -24,7 +24,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "audit": "npm audit --audit-level=moderate",
+    "audit": "npm audit --omit=dev --audit-level=moderate",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "keywords": [
@@ -58,10 +58,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@vitest/coverage-v8": "^2.1.0",
-    "happy-dom": "^15.0.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "happy-dom": "^20.9.0",
     "typescript": "^5.6.0",
-    "vitest": "^2.1.0"
+    "vitest": "^4.1.5"
   },
   "publishConfig": {
     "access": "public"
