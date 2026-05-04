@@ -13,6 +13,7 @@
   },
   "files": [
     "dist",
+    "!dist/**/*.test.*",
     "README.md",
     "LICENSE",
     "CHANGELOG.md"
@@ -46,7 +47,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/knit-labs/knit-signer-sdk.git"
+    "url": "git+https://github.com/knit-labs/knit-signer-sdk.git"
   },
   "bugs": {
     "url": "https://github.com/knit-labs/knit-signer-sdk/issues"
