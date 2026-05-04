@@ -101,7 +101,13 @@ jobs:
           node-version: '22.x'
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
+      - name: Use npm with trusted publishing support
+        run: npm install -g npm@latest
       - run: npm ci
+      - name: Show npm publish identity
+        run: |
+          npm --version
+          npm whoami
       - run: npm run build
       - name: Publish to npm
         run: npm publish --access public --provenance
