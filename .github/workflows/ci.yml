@@ -98,16 +98,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '24.x'
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
-      - name: Use npm with trusted publishing support
-        run: npm install -g npm@latest
       - run: npm ci
-      - name: Show npm publish identity
+      - name: Show publish tool versions
         run: |
+          node --version
           npm --version
-          npm whoami
       - run: npm run build
       - name: Publish to npm
         run: npm publish --access public --provenance
