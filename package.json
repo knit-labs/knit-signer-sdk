@@ -1,7 +1,7 @@
 {
   "name": "@useknit/signer-sdk",
   "version": "0.1.0",
-  "description": "Browser-side helpers for registering and signing with Knit-managed signers (WebAuthn passkeys today; EOA + more later).",
+  "description": "Browser-side helpers for registering and signing with Knit-managed signers (WebAuthn passkeys and EOA wallets).",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -32,6 +32,8 @@
     "safe",
     "webauthn",
     "passkey",
+    "walletconnect",
+    "eoa",
     "signer",
     "custody",
     "ethereum",
@@ -54,7 +56,11 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@safe-global/protocol-kit": "^7.1.0"
+    "@keystonehq/bc-ur-registry": "^0.7.1",
+    "@ngraveio/bc-ur": "^1.1.13",
+    "@safe-global/protocol-kit": "^7.1.0",
+    "buffer": "^6.0.3",
+    "viem": "^2.48.8"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

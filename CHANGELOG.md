@@ -7,6 +7,19 @@ and the project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- `signWithEoa(options)` — produces a Safe-compatible EOA `r || s || v`
+  signature for a `transactionHash` using an EIP-1193 wallet provider. This
+  works with injected wallets, wagmi connectors, and WalletConnect/Reown
+  providers supplied by the consuming app.
+- Air-gapped EOA QR signing helpers:
+  `createEoaQrSignRequest(options)`, `decodeEoaQrSignature(response)`,
+  `EoaQrSignatureDecoder`, and `verifyEoaQrSignature(options)`.
+- EOA-specific errors: `WalletConnectionError` and
+  `SignerAddressMismatchError`.
+- QR-specific error: `QrSigningError`.
+
 ## [0.1.0] - 2026-04-26
 
 Initial release.
