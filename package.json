@@ -1,6 +1,6 @@
 {
   "name": "@useknit/signer-sdk",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Browser-side helpers for registering and signing with Knit-managed signers (WebAuthn passkeys and EOA wallets).",
   "type": "module",
   "main": "./dist/index.js",
